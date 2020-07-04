@@ -36,6 +36,7 @@ let notes = [
 app.use(cors())
 app.use(express.json())
 app.use(requestLogger)
+app.use(express.static('build'))
 
 app.get('/', (request, response) => {
   response.send('<h1>Hello World!')
